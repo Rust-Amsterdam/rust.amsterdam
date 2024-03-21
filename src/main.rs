@@ -3,8 +3,8 @@ use inviteify::Inviteify;
 use std::path::{Path, PathBuf};
 use std::{env, fs, io};
 
-static INVITE_MIN_AGE_SECONDS: u64 = 86400 * 7;
-static INVITE_MAX_AGE_SECONDS: u64 = 86400 * 10;
+static INVITE_MIN_AGE_SECONDS: u64 = 86400 * 5;
+static INVITE_MAX_AGE_SECONDS: u64 = 86400 * 7 - 1;
 
 fn default_build_path() -> PathBuf {
     let mut p = env::current_dir().expect("Unable to locate current working directory");
