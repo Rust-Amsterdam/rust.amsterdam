@@ -104,6 +104,10 @@ async fn build(
     // Generate QR Code
     let min_age = INVITE_MIN_AGE_SECONDS;
     let max_age = INVITE_MAX_AGE_SECONDS;
+    println!(
+        "Generating invite link with min_age={} and max_age={}",
+        min_age, max_age
+    );
 
     let invite = service
         .check_and_generate_invite(channel_id, min_age, max_age)
